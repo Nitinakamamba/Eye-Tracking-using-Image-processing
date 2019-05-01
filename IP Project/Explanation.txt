@@ -1,0 +1,16 @@
+used viola jones method for face detection
+used hough transform to extract the eyes from the image
+the entire face should be seen in the image and only then the viola-jones method will be implemented
+
+first an image is taken using the web camera
+it is converted into a black and white image
+the image is flipped horizontally as the camera takes a mirror image
+boundary of the extracted image is created using the detector
+if there are two faces in the image, it will take the bigger of the two
+once this is done, the imcrop function is used to extract the eyes from the image
+then the location of the eyeball is detected using the detector
+imfindcircles function is used to detect the circles in the image of the specified radius, in this case the eyeballs
+the distance of the eyeball from the center of the eye is calculated, both left and right
+if the distance from the right is less as compared to the left, then the eyeball is towards the right
+else if left is less then left
+otherwise eyeball is in the centre
